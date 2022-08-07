@@ -52,7 +52,7 @@ def addSubscriber():
     subscribers.insert_one(newSub)
     return "success"
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 @cross_origin()
 def serve():
     return send_from_directory(app.static_folder, 'index.html')
