@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, redirect, url_for, abort, jsonify
+from flask import Flask, render_template, request, send_from_directory, session, redirect, url_for, abort, jsonify
 import os
 import uuid 
 import pymongo
@@ -10,7 +10,8 @@ from flask_cors import CORS, cross_origin
 x = datetime.datetime.now()
   
 # Initializing flask app
-app = Flask(__name__, static_folder='comminhealthref/build')
+app = Flask(__name__, static_folder='frontend/build', static_url_path='')
+CORS(app)
 
 cluster = MongoClient("mongodb+srv://timotea:comminhealth123@cluster0.cjp1ry7.mongodb.net/?retryWrites=true&w=majority")
 db = cluster["CommInHealth"]
@@ -19,6 +20,7 @@ subscribers = db["Subscribers"]
   
 # Route for seeing a data
 @app.route('/getHomeData')
+@cross_origin()
 def getHomeData():
     posts = episodes.find({})
     returnPosts = []
@@ -30,6 +32,7 @@ def getHomeData():
     return jsonify(returnPosts)
 
 @app.route("/getData")
+@cross_origin()
 def getData():
     posts = episodes.find({})
     returnPosts = []
@@ -39,6 +42,7 @@ def getData():
     return jsonify(returnPosts)
 
 @app.route("/addSubscriber", methods=['POST', 'GET']) 
+@cross_origin()
 def addSubscriber():
     data = request.get_json()
     newSub = {
@@ -47,7 +51,11 @@ def addSubscriber():
     }
     subscribers.insert_one(newSub)
     return "success"
-  
+
+@app.route('/')
+@cross_origin()
+def serve():
+    return send_from_directory(app.static_folder, 'index.html')
       
 # Running app
 if __name__ == '__main__':
