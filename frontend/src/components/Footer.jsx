@@ -1,4 +1,6 @@
 import React from "react";
+import spotify from "../img/icons/spotify.svg";
+import apple from "../img/icons/apple-podcasts.svg";
 
 function Footer() {
   return (
@@ -58,16 +60,16 @@ function Footer() {
                 </div>
 
                 <div>
-                  Website designed by timotea
+                  Website designed by Timothy Hu
                 </div>
               </div>
               <div class="flex flex-row text-center items-center text-xl text-white mb-2">
                 <a href="https://open.spotify.com/show/2ORPeUT5zA6coUGrBVi6Ps" class="mr-10">
-                  <img src="../static/img/icons/spotify.svg" class="spotify" alt="HELLO!" />
+                  <img src={spotify} class="spotify" alt="HELLO!" />
                 </a>
 
                 <a href="https://podcasts.apple.com/podcast/id1629728620">
-                  <img src="../static/img/icons/apple-podcasts.svg" class="spotify" alt="HELLO!" />
+                  <img src={apple} class="spotify" alt="HELLO!" />
                 </a>
 
               </div>

@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../img/logo.png";
-import search from "../img/icons/magnifying-glass-solid.svg";
+
 function Navigation() {
   return (
     <header class="flex flex-row justify-center items-center">
@@ -16,11 +16,11 @@ function Navigation() {
                 <a href="/">Home</a>
                 <a href="/episodes">Episodes</a>
                 <a href="/about">About</a>
-                <a href="/review">Reviews</a>
-                <a href="/search"><img src={search} style={{maxWidth: "1em", display: "inline"}}/></a>
+                <a href="/reviews">Reviews</a>
             </div>
         </div>
     </div>
+
 
 
 

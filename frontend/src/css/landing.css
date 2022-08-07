@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
+    overflow-x: hidden;
 }
 
 header {
@@ -162,6 +163,18 @@ header img {
     color: black;
     transition: 0.3s ease;
     
+}
+
+.searchTag {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border: 2px solid;
+    border-color: blue;
+    color: #6b7280;
+    padding: 4px 8px 4px 8px;
+    margin-right: 15px;
+    border-radius: 5em;
+    transition: 0.3s ease;
 }
 
 .sidetag {

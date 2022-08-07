@@ -8,13 +8,12 @@ import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {
   Navigation,
+  Episodes,
   Footer,
   Home,
   About,
   Contact,
-  Blog,
-  Posts,
-  Post,
+  Reviews,
 } from "./components";
 
 ReactDOM.render(
@@ -24,10 +23,9 @@ ReactDOM.render(
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/blog" element={<Blog />}>
-        <Route path="" element={<Posts />} />
-        <Route path=":postSlug" element={<Post />} />
-      </Route>
+      <Route path="/episodes" element={<Episodes />} />
+      <Route path="/episodes/:searchTag" element={<Episodes />} />
+      <Route path="/reviews" element={<Reviews />} />
     </Routes>
     <Footer />
   </Router>,

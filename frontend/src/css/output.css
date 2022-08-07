@@ -2128,6 +2128,9 @@ video {
   bottom: 25%;
 }
 
+.bg-cyan-50 {
+  background-color: rgb(236 254 255);
+}
 .inset-y-2\/4 {
   top: 50%;
   bottom: 50%;
