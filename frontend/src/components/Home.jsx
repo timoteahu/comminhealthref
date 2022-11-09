@@ -29,7 +29,7 @@ function Home() {
                 <div class="flex flex-row justify-between items-center mx-4 w-full"
                     style={{ maxWidth: "80rem", paddingLeft: "3px", paddingRight: "3px", paddingTop: "20px", paddingBottom: "20px" }}>
                     <div class="flex flex-col justify-start items-start">
-                        <p class="gradient-text py-8">New Episodes Every Week! **under maintenance** </p>
+                        <p class="gradient-text py-8">New Episodes Every Week! UNDER MAINTENANCE </p>
                         <p class="text-5xl font-bold pb-8" style={{ fontFamily: "Trispace" }}>Communications in Health </p>
                         <p class="mb-10">Watch and listen as Shiven navigates the various aspects of our current medicinal
                             world!</p>
